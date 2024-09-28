@@ -28,6 +28,16 @@ def calculate(cal_func, n1, n2):
 #         print("I am inner")
 #     nested_function()
 
+def delay_decorator_function(function):
+    def wrapper_function():
+        function()
+    return wrapper_function
 
+@delay_decorator_function
+def say_hello():
+    print("Hello")
+
+def say_bye():
+    print("Bye")
 
 
